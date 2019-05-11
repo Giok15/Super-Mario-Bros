@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61FE6B1B-1059-4F11-9775-7E169E914095}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mario</RootNamespace>
+    <AssemblyName>Mario</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mushroom.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountResultaten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountResultaten.Designer.cs">
+      <DependentUpon>AccountResultaten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonLevel.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Controllers\CharacterController.cs" />
+    <Compile Include="Database\DatabaseCon.cs" />
+    <Compile Include="Database\LevelDb.cs" />
+    <Compile Include="Database\ProfielDb.cs" />
+    <Compile Include="Database\ResultaatDb.cs" />
+    <Compile Include="Database\SpelDb.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="Controllers\EnemyController.cs" />
+    <Compile Include="Entityclasses\Algemene_resultaat.cs" />
+    <Compile Include="Entityclasses\Level.cs" />
+    <Compile Include="Entityclasses\Profiel.cs" />
+    <Compile Include="Entityclasses\Resultaat.cs" />
+    <Compile Include="Entityclasses\Spel.cs" />
+    <Compile Include="Sounds.cs" />
+    <Compile Include="Titlescreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Titlescreen.Designer.cs">
+      <DependentUpon>Titlescreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WereldDelen\deel_bloks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WereldDelen\deel_bloks.Designer.cs">
+      <DependentUpon>deel_bloks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WereldDelen\deel_coins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WereldDelen\deel_coins.Designer.cs">
+      <DependentUpon>deel_coins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WereldDelen\deel_gaten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WereldDelen\deel_gaten.Designer.cs">
+      <DependentUpon>deel_gaten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WereldDelen\deel_shuifbalken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WereldDelen\deel_shuifbalken.Designer.cs">
+      <DependentUpon>deel_shuifbalken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WereldDelen\deel_springen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WereldDelen\deel_springen.Designer.cs">
+      <DependentUpon>deel_springen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Level.Designer.cs">
+      <DependentUpon>Level.cs</DependentUpon>
+    </Compile>
+    <Compile Include="World.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="World.Designer.cs">
+      <DependentUpon>World.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccountResultaten.resx">
+      <DependentUpon>AccountResultaten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Titlescreen.resx">
+      <DependentUpon>Titlescreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WereldDelen\deel_bloks.resx">
+      <DependentUpon>deel_bloks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WereldDelen\deel_coins.resx">
+      <DependentUpon>deel_coins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WereldDelen\deel_gaten.resx">
+      <DependentUpon>deel_gaten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WereldDelen\deel_shuifbalken.resx">
+      <DependentUpon>deel_shuifbalken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WereldDelen\deel_springen.resx">
+      <DependentUpon>deel_springen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level.resx">
+      <DependentUpon>Level.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="World.resx">
+      <DependentUpon>World.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\World.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvl1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Titlescreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\DBMario.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\DBMario_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>DBMario.mdf</DependentUpon>
+    </Content>
+    <Content Include="mushroom.ico" />
+    <None Include="Resources\mario_groot_rechts.png" />
+    <None Include="Resources\mario_groot_omhoog_rechts.png" />
+    <None Include="Resources\mario_groot_omhoog_links.png" />
+    <None Include="Resources\mario_groot_links_loop.png" />
+    <None Include="Resources\mario_groot_links.png" />
+    <None Include="Resources\mario_super_rechts_loop.png" />
+    <None Include="Resources\mario_super_rechts.png" />
+    <None Include="Resources\mario_super_omhoog_rechts.png" />
+    <None Include="Resources\mario_super_omhoog_links.png" />
+    <None Include="Resources\mario_super_links_loop.png" />
+    <None Include="Resources\mario_super_links.png" />
+    <None Include="Resources\mario_groot_rechts_loop.png" />
+    <None Include="Resources\vlag_vlag.png" />
+    <None Include="Resources\vlag_stok.png" />
+    <None Include="Resources\castle.png" />
+    <None Include="Resources\clouds.jpg" />
+    <None Include="Resources\cloud.jpg" />
+    <None Include="Resources\mario-clipart-castle-8.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\schild_rechts.png" />
+    <None Include="Resources\schild_midden.png" />
+    <None Include="Resources\schild_links.png" />
+    <None Include="Resources\inloggen.png" />
+    <None Include="Resources\lvl1_bezet.png" />
+    <None Include="Resources\lvl6_gehaald.png" />
+    <None Include="Resources\lvl6_current.png" />
+    <None Include="Resources\lvl6_bezet.png" />
+    <None Include="Resources\lvl5_gehaald.png" />
+    <None Include="Resources\lvl5_current.png" />
+    <None Include="Resources\lvl5_bezet.png" />
+    <None Include="Resources\lvl4_gehaald.png" />
+    <None Include="Resources\lvl4_current.png" />
+    <None Include="Resources\lvl4_bezet.png" />
+    <None Include="Resources\lvl3_gehaald.png" />
+    <None Include="Resources\lvl3_current.png" />
+    <None Include="Resources\lvl3_bezet.png" />
+    <None Include="Resources\lvl2_gehaald.png" />
+    <None Include="Resources\lvl2_current.png" />
+    <None Include="Resources\lvl2_bezet.png" />
+    <None Include="Resources\lvl1_gehaald.png" />
+    <None Include="Resources\lvl1_current.png" />
+    <None Include="Resources\ground1test.png" />
+    <None Include="Resources\mario_rechts2.png" />
+    <None Include="Resources\goomba_dood.png" />
+    <None Include="Resources\koopa_died.png" />
+    <None Include="Resources\koopa_rechts_loop.png" />
+    <None Include="Resources\koopa_rechts.png" />
+    <None Include="Resources\koopa_links_loop.png" />
+    <None Include="Resources\koopa_links.png" />
+    <None Include="Resources\blokvraagtegen.png" />
+    <None Include="Resources\blokbrick.png" />
+    <None Include="Resources\goomba_rechts_loop.png" />
+    <None Include="Resources\goomba_links_loop.png" />
+    <None Include="Resources\ground2.png" />
+    <None Include="Resources\solidblock.png" />
+    <None Include="Resources\mario_omhoog_rechts.png" />
+    <None Include="Resources\mario_omhoog_links.png" />
+    <None Include="Resources\mario_links_loop.png" />
+    <None Include="Resources\mario_links.png" />
+    <None Include="Resources\ground1.png" />
+    <None Include="Resources\mario_omhoog.png" />
+    <None Include="Resources\mario_rechts_loop.png" />
+    <None Include="Resources\mario_rechts.png" />
+    <None Include="Resources\uitloggen.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\munten.png" />
+    <None Include="Resources\levens.png" />
+    <None Include="Resources\Avatar4.png" />
+    <None Include="Resources\Avatar3.png" />
+    <None Include="Resources\Avatar2.png" />
+    <None Include="Resources\Avatar1.png" />
+    <None Include="Resources\Avatar5.png" />
+    <None Include="Resources\lvl6.png" />
+    <None Include="Resources\lvl5.png" />
+    <None Include="Resources\lvl4.png" />
+    <None Include="Resources\lvl3.png" />
+    <None Include="Resources\lvl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
